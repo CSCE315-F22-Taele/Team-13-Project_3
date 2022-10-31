@@ -1,7 +1,8 @@
 function updateUserRole(value) {
     localStorage.setItem("role-name", value);
     document.write("Current user role is " + localStorage.getItem("role-name"));
-    changeScreenForManager();
+    if (localStorage.getItem("role-name") == "manager")
+      changeScreenForManager();
 }
 
 function changeScreenForManager() {
