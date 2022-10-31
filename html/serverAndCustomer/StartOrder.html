@@ -1,8 +1,21 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Order</title>
+</head>
+<body>
     <script src="functions.java"></script>
+    <script src="../../js/serverAndCustomer/StartOrder.js"></script>
     <button type="button" onclick="addCheesePizza()">Cheese Pizza</button>
     <button type="button" onclick="addPepperoniPizza()">Pepperoni Pizza</button>
-    <a href="startBYO.html">BYO Pizza</a>
-    <a href="drinkSelection.html">Drinks</a>
+    <button type="button" id="button-startBYO" onclick="changeScreenForBYO()">BYO Pizza</button>
+    <button type="button" id="button-drink-selection" onclick="changeScreenForDrinks()">Drinks</button>
+    <button type="button" id="button-drink-selection" onclick="changeScreenForFinishOrder()">Finish Order</button>
+    <!-- <a href="startBYO.html">BYO Pizza</a>
+        <a href="drinkSelection.html">Drinks</a> -->
     <h1 id="total">$0.00</h1>
+</body>
 </html>
