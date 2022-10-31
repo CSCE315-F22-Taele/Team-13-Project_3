@@ -3,5 +3,5 @@ function testLocalStorage(){
 }
 
 function getStarted() {
-  window.location.href = "UserSelector.html";
+  window.location.href = "../html/other/UserSelector.html";
 } 
