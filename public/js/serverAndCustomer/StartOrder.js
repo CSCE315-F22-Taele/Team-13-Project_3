@@ -91,7 +91,12 @@ function changeScreenForBYODone() {
 
 
 function regularCrustChosen() {
-  window.order.setCrust(0);
+  order.setCrust(0);
+  console.log(JSON.stringify(order.crust));
+}
+
+function displayOrder() {
+  document.getElementById("crustGuy").innerHTML = order.getCrust();
 }
 
 function cauliflowerCrustChosen() {
