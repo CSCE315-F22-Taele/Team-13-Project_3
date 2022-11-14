@@ -91,12 +91,16 @@ function changeScreenForBYODone() {
 
 
 function regularCrustChosen() {
-  order.setCrust(0);
-  console.log(JSON.stringify(order.crust));
+  order.crust = 0;
+  console.log(order.crust);
 }
 
 function displayOrder() {
-  document.getElementById("crustGuy").innerHTML = order.getCrust();
+  document.getElementById("crustGuy").innerHTML = order.crust;
+}
+
+function cheesePizzaChosen() {
+  order.setPizza();
 }
 
 function cauliflowerCrustChosen() {
