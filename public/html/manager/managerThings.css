@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(61, 61, 61);
+    text-align: center;
+    font-size: 200%;
+    color:white;
+    
+}
+
+.button {
+    width: 400px;
+    margin:auto;
+    background-color: #afa84c;
+    border: 10px solid rgb(61, 61, 61);
+    border-radius: 20px;
+    color: rgb(61, 61, 61);
+    padding: 32px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+}
+
+.button:hover {
+    background-color: darkgray;
+}
