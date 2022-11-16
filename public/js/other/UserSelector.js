@@ -5,6 +5,8 @@ function updateUserRole(value) {
       changeScreenForManager();
     else if (localStorage.getItem("role-name") == "server" || localStorage.getItem("role-name") == "customer")
       changeScreenForServer();
+    else if (localStorage.getItem("role-name") == "location")
+      changeScreenForLocation();
     else
       document.write("Invalid user type selected.");
 }
@@ -15,4 +17,8 @@ function changeScreenForManager() {
 
 function changeScreenForServer() {
   window.location.href = "../serverAndCustomer/StartOrder.html";
+} 
+
+function changeScreenForLocation() {
+  window.location.href = "../other/pages_maps.html";
 } 
