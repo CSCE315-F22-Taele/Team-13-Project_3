@@ -1,61 +1,3 @@
-class Order{
-  constructor() {
-      this.crust = -1;
-      this.sauce = -1;
-      this.cheese = -1;
-      this.toppings = [];
-      this.drink = -1;
-  }
-
-  setPizza() {
-      this.crust = 0;
-      this.sauce = 0;
-      this.cheese = 0;
-  }
-
-  setCrust(c) {
-      this.crust = c;
-  }
-
-  setSauce(s) {
-      this.sauce = s;
-  }
-
-  setCheese(c) {
-      this.cheese = c;
-  }
-
-  addTopping(t) {
-      this.toppings.push(t);
-  }
-
-  setDrink(d) {
-      this.drink = d;
-  }
-
-  getCrust() {
-      return this.crust;
-  }
-
-  getSauce() {
-      return this.sauce;
-  }
-
-  getCheese() {
-      return this.cheese;
-  }
-
-  getToppings() {
-      return this.toppings;
-  }
-
-  getDrink() {
-      return this.drink;
-  }
-
-}
-
-var order = new Order();
 
 function changeScreenForBYO() {
   window.location.href = "../../html/serverAndCustomer/StartBYO.html";
@@ -89,124 +31,189 @@ function changeScreenForBYODone() {
   window.location.href = "../../html/serverAndCustomer/StartOrder.html";
 }
 
+// localStorage.setItem('crustType', 'None');
+// localStorage.setItem('crustID', -1);
 
-function regularCrustChosen() {
-  order.crust = 0;
-  console.log(order.crust);
-}
+// localStorage.setItem('sauceType', 'None');
+// localStorage.setItem('sauceID', -1);
 
-function displayOrder() {
-  document.getElementById("crustGuy").innerHTML = order.crust;
-}
+// localStorage.setItem('cheeseType', 'None');
+// localStorage.setItem('cheeseID', -1);
+
+// localStorage.setItem('toppingType', 'None');
+// localStorage.setItem('toppingID', '-1');
+
+localStorage.setItem('drinkType', 'None');
+// localStorage.setItem('drinkID', -1);
+
 
 function cheesePizzaChosen() {
-  order.setPizza();
+  regularCrustChosen();
+  traditionalSauceChosen();
+  regularCheeseChosen();
+}
+
+function pepperoniPizzaChosen() {
+  regularCrustChosen();
+  traditionalSauceChosen();
+  regularCheeseChosen();
+  pepperoniChosen();
+}
+
+function regularCrustChosen() {
+  localStorage.setItem('crustType', 'Regular Crust');
+  localStorage.setItem('crustID', 0);
 }
 
 function cauliflowerCrustChosen() {
-  order.setCrust(1);
+  localStorage.setItem('crustType', 'Cauliflower Crust');
+  localStorage.setItem('crustID', 1);
 }
 
 function traditionalSauceChosen() {
-  order.setSauce(0);
+  localStorage.setItem('sauceType', 'Traditional Red');
+  localStorage.setItem('sauceID', 0);
 }
 
 function alfredoSauceChosen() {
-  order.setSauce(1);
+  localStorage.setItem('sauceType', 'Alfredo');
+  localStorage.setItem('sauceID', 1);
 }
 
 function zestySauceChosen() {
   order.setSauce(2);
+  localStorage.setItem('sauceType', 'Zesty Red');
+  localStorage.setItem('sauceID', 2);
 }
 
 function regularCheeseChosen() {
-  order.setCheese(0);
+  localStorage.setItem('cheeseType', 'House Blend');
+  localStorage.setItem('cheeseID', 0);
 }
 
 function parmesanChosen() {
-  order.setCheese(1);
+  localStorage.setItem('cheeseType', 'Parmesan');
+  localStorage.setItem('cheeseID', 1);
+}
+
+function addTopping(name, id) {
+  var temp1, temp2;
+  if (localStorage.getItem('toppingType') == null) {
+    temp1 = name;
+    temp2 = id;
+  } else {
+    temp1 = localStorage.getItem('toppingType') + ", " + name;
+    temp2 = localStorage.getItem('toppingID') + "," + id;
+  }
+  localStorage.setItem('toppingType', temp1);
+  localStorage.setItem('toppingID', temp2);
 }
 
 function hamChosen() {
-  order.addTopping(0);
+  addTopping("Black Forest Ham", '0');
 }
 
 function sausageChosen() {
-  order.addTopping(1);
+  addTopping("Italian Sausage", "1");
 }
 
 function meatballChosen() {
-  order.addTopping(2);
+  addTopping("Meatballs", "2");
 }
 
 function pepperoniChosen() {
-  order.addTopping(3);
+  addTopping("Pepperoni", "3");
 }
 
 function chickenChosen() {
-  order.addTopping(4);
+  addTopping("Smoked Chicken", "4");
 }
 
 function bananaPepperChosen() {
-  order.addTopping(5);
+  addTopping("Banana Peppers", "5");
 }
 
 function olivesChosen() {
-  order.addTopping(6);
+  addTopping("Black Olives", "6");
 }
 
 function greenPepperChosen() {
-  order.addTopping(7);
+  addTopping("Green Peppers", "7");
 }
 
 function jalepenosChosen() {
-  order.addTopping(8);
+  addTopping("Jalepenos", "8");
 }
 
 function mushroomsChosen() {
-  order.addTopping(9);
+  addTopping("Mushrooms", "9");
 }
 
 function onionsChosen() {
-  order.addTopping(10);
+  addTopping("Onions", "10");
 }
 
 function pineappleChosen() {
-  order.addTopping(11);
+  addTopping("Pineapple", "11");
 }
 
+
 function garlicChosen() {
-  order.addTopping(12);
+  addTopping("Garlic", "12");
 }
 
 function spinachChosen() {
-  order.addTopping(13);
+  addTopping("Spinach", "13");
 }
 
 function tomatoChosen() {
-  order.addTopping(14);
+  addTopping("Tomato", "14");
 }
 
 function broccoliChosen() {
-  order.addTopping(15);
+  addTopping("Broccoli", "15");
 }
 
 function bbqChosen() {
-  order.addTopping(16);
+  addTopping("BBQ Drizzle", "16");
 }
 
 function oliveOilChosen() {
-  order.addTopping(17);
+  addTopping("Olive Oil Drizzle", "17");
 }
 
 function oreganoChosen() {
-  order.addTopping(18);
+  addTopping("Oregano Drizzle", "18");
 }
 
 function ranchChosen() {
-  order.addTopping(19);
+  addTopping("Ranch Drizzle", "19");
 }
 
 function sirachaChosen() {
-  order.addTopping(20);
+  addTopping("Siracha Drizzle", "20");
+}
+
+function fountainDrinkChosen() {
+  localStorage.setItem('drinkType', '22oz');
+  localStorage.setItem('drinkID', 0);
+}
+
+function waterChosen() {
+  localStorage.setItem('drinkType', 'Water Bottle');
+  localStorage.setItem('drinkID', 1);
+}
+
+function gatoradeChosen() {
+  localStorage.setItem('drinkType', 'Gatorade');
+  localStorage.setItem('drinkID', 2);
+}
+
+function displayOrder() {
+  document.getElementById("display-crust").innerHTML = "Crust: " + localStorage.getItem('crustType');
+  document.getElementById("display-sauce").innerHTML = "sauce: " + localStorage.getItem('sauceType');
+  document.getElementById("display-cheese").innerHTML = "Cheese: " + localStorage.getItem('cheeseType');
+  document.getElementById("display-topping").innerHTML = "Topping(s): " + localStorage.getItem('toppingType');
+  document.getElementById("display-drink").innerHTML = "Drink: " + localStorage.getItem('drinkType');
+  localStorage.clear();
 }
