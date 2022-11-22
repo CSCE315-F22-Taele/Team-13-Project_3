@@ -12,7 +12,7 @@ function updateUserRole(value) {
 }
 
 function changeScreenForManager() {
-  window.location.href = "../manager/ManagerOptions.html";
+  window.location.href = "../manager/ManagerAuthentication.html";
 } 
 
 function changeScreenForServer() {
