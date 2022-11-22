@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/CSCE315-F22-Taele/Team-13-Project_3#readme",
   "dependencies": {
+    "@google-cloud/translate": "^7.0.4",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2"
   }
 }
