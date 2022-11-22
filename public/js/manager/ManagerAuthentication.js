@@ -1,6 +1,6 @@
 function manEmailSubmitted() {
-  manEmailVal = document.getElementById("man-email").value;
-  if (manEmailVal == "manager@spinnstone.com"){
+  manPassword = document.getElementById("man-pw").value;
+  if (manPassword == "CorrectHorseBatteryStapl3"){
     window.location.href = "./ManagerOptions.html";
   }
   else{
