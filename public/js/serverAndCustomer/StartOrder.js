@@ -30,7 +30,9 @@ function changeScreenForToppings() {
 function changeScreenForBYODone() {
   window.location.href = "../../html/serverAndCustomer/StartOrder.html";
 }
-
+function changeScreenForServer() {
+  window.location.href = "../serverAndCustomer/StartOrder.html";
+} 
 // localStorage.setItem('crustType', 'None');
 // localStorage.setItem('crustID', -1);
 
