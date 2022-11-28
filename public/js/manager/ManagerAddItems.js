@@ -6,10 +6,8 @@
 
 function addItemSubmitted() {
   itemNameVal = document.getElementById("itemName").value;
-  //   document.write(formValue);
   document.getElementById("postItemName").setAttribute("value", itemNameVal); // Copy the value
 
   itemPriceVal = document.getElementById("itemPrice").value;
-  //   document.write(formValue);
   document.getElementById("postItemPrice").setAttribute("value", itemPriceVal); // Copy the value
 }

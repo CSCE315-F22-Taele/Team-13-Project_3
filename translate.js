@@ -28,43 +28,43 @@ const detectLanguage = async (text) => {
 //         console.log(err);
 //     });
 
-const translateText = async (text, targetLanguage) => {
-  try {
-    let [response] = await translate.translate(text, targetLanguage);
-    document.write(response);
-    return response;
-  } catch (error) {
-    console.log(`Error at translateText --> ${error}`);
-    return 0;
-  }
-};
+// const translateText = async (text, targetLanguage) => {
+//   try {
+//     let [response] = await translate.translate(text, targetLanguage);
+//     document.write(response);
+//     return response;
+//   } catch (error) {
+//     console.log(`Error at translateText --> ${error}`);
+//     return 0;
+//   }
+// };
 
-function translateTextNoAsync(text, targetLanguage){
-    document.write("Here");
-    let [response] = translate.translate(text, targetLanguage);
-    document.write(response);
-    return response;
-}
+// function translateTextNoAsync(text, targetLanguage){
+//     document.write("Here");
+//     let [response] = translate.translate(text, targetLanguage);
+//     document.write(response);
+//     return response;
+// }
 
-function translateTextFuncAsync(text, targetLanguage){
-    translateText(text, targetLanguage).then((res) => {
-      console.log(res);
-      document.write(res);
-    });
-}
+// function translateTextFuncAsync(text, targetLanguage){
+//     translateText(text, targetLanguage).then((res) => {
+//       console.log(res);
+//       document.write(res);
+//     });
+// }
 
 
 
-function writeSomething(){
-   translateText("Oggi è lunedì", "en")
-     .then((res) => {
-       console.log(res);
-       document.write(res);
-     })
-     .catch((err) => {
-       console.log(err);
-     });
-}
+// function writeSomething(){
+//    translateText("Oggi è lunedì", "en")
+//      .then((res) => {
+//        console.log(res);
+//        document.write(res);
+//      })
+//      .catch((err) => {
+//        console.log(err);
+//      });
+// }
 
 function googleTranslateElementInit(){
     new google.translate.TranslateElement(
