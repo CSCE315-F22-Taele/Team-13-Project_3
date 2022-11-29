@@ -48,6 +48,11 @@ function changeScreenForServer() {
 localStorage.setItem('drinkType', 'None');
 // localStorage.setItem('drinkID', -1);
 
+function testing() {
+  fetch('http://localhost:3000/getTest')
+  .then(response => response.json())
+  .then(data => console.log(data));
+}
 
 function cheesePizzaChosen() {
   regularCrustChosen();
