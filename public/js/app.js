@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended : false}));
 
 // create
 app.post('/insert', (req, res) => {
-
+    console.log(request.body);
 });
 
 // read
@@ -21,7 +21,12 @@ app.get('/getTest', (req, res) =>{
     const db = dbConnect.getDbConnectInstance();
 
     const result = db.getTestData();
-    console.log('success');
+    
+    result
+    .then(data => res.json({data : data}))
+    .catch(err => console.log(err));
+    
+    console.log("done with getTest");
 });
 
 // update

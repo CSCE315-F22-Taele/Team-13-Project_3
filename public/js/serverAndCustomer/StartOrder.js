@@ -49,10 +49,45 @@ localStorage.setItem('drinkType', 'None');
 // localStorage.setItem('drinkID', -1);
 
 function testing() {
+  // change to test page
+  window.location.href = "../serverAndCustomer/test.html";  
+  console.log('in testing');
+  //alert("in testing");
+  // coordinates with back end on port 3000
   fetch('http://localhost:3000/getTest')
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => loadTestTable(data['data']))
+  .catch(err => console.log(err));
+
 }
+
+function loadTestTable(data){
+  alert("back in testing");
+  console.log('back in testing');
+  const table = document.getElementById(table);
+
+  console.log('in loadTest');
+
+  console.log(data);
+
+  if (data.length === 0){
+    table.innerHTML = "<tr><td class='no data' colspan='3'>No Data</td></tr>";
+  } else {
+    let tableHtml = "";
+    data.array.forEach(function ({id, name, quantity}){
+      console.log(`${id}`);
+      tableHtml +="<tr>";
+      tableHtml += `<td>${id}</td>`;
+      tableHtml += `<td>${name}</td>`;
+      tableHtml += `<td>${quantity}</td>`;
+      tableHtml += "</tr>";
+    });
+
+    table.innerHTML = tableHtml
+  }
+}
+
+// const addBtn
 
 function cheesePizzaChosen() {
   regularCrustChosen();
