@@ -33,6 +33,10 @@ function changeScreenForBYODone() {
 function changeScreenForServer() {
   window.location.href = "../serverAndCustomer/StartOrder.html";
 } 
+
+function changeToTest() {
+  window.location.href = "../serverAndCustomer/test.html"
+}
 // localStorage.setItem('crustType', 'None');
 // localStorage.setItem('crustID', -1);
 
@@ -48,42 +52,43 @@ function changeScreenForServer() {
 localStorage.setItem('drinkType', 'None');
 // localStorage.setItem('drinkID', -1);
 
+/*
+  Function that tests ability to get data from HTML table
+*/
+
 function testing() {
-  // change to test page
-  window.location.href = "../serverAndCustomer/test.html";  
-  console.log('in testing');
-  //alert("in testing");
+  
   // coordinates with back end on port 3000
   fetch('http://localhost:3000/getTest')
   .then(response => response.json())
-  .then(data => loadTestTable(data['data']))
-  .catch(err => console.log(err));
+  .then(data => loadTable(data['data']))
+  .catch(err => alert(err));
+  
 
 }
 
-function loadTestTable(data){
-  alert("back in testing");
-  console.log('back in testing');
-  const table = document.getElementById(table);
+function loadTable(data){
 
-  console.log('in loadTest');
-
-  console.log(data);
+  // References HTML table
+  const table = document.querySelector('table tbody');  
 
   if (data.length === 0){
     table.innerHTML = "<tr><td class='no data' colspan='3'>No Data</td></tr>";
   } else {
-    let tableHtml = "";
-    data.array.forEach(function ({id, name, quantity}){
-      console.log(`${id}`);
-      tableHtml +="<tr>";
-      tableHtml += `<td>${id}</td>`;
-      tableHtml += `<td>${name}</td>`;
-      tableHtml += `<td>${quantity}</td>`;
-      tableHtml += "</tr>";
-    });
+    
+    var tableHtml = "";
 
-    table.innerHTML = tableHtml
+    for (var key in data.rows) {
+      tableHtml += "<tr>";
+      for (var keyName in data.rows[key]){
+        var entry = (data.rows[key])[keyName];
+        alert(keyName);
+        tableHtml += `<td>${entry}</td>`;
+      }
+      tableHtml += "</tr>";
+    }
+
+    table.innerHTML = tableHtml;
   }
 }
 

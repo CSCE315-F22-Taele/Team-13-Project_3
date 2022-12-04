@@ -21,12 +21,13 @@ app.get('/getTest', (req, res) =>{
     const db = dbConnect.getDbConnectInstance();
 
     const result = db.getTestData();
+    // console.log(result);
     
     result
     .then(data => res.json({data : data}))
     .catch(err => console.log(err));
     
-    console.log("done with getTest");
+    // console.log(data);
 });
 
 // update

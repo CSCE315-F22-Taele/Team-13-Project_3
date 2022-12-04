@@ -36,8 +36,10 @@ class DbConnect {
           if (err) reject(new Error(err.message));
           resolve(results);
         });
+        
 
       });
+      console.log(response);
     
       return response;
       
