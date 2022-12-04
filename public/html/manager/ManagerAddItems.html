@@ -26,21 +26,34 @@
         <br><br> 
         Post text: <input type="text" name="firstname">
     </form> -->
+
+        <label for="itemType">Type of item:</label>
+        <select name="itemType" id="itemType">
+            <optgroup label="Has a Price">
+                <option value="pizza">Pizza</option>
+                <option value="drinks">Drinks</option>
+            </optgroup>
+            <optgroup label="No Change in Price">
+                <option value="toppings">Toppings</option>
+                <option value="cheese">Cheese</option>
+                <option value="sauce">Sauce</option>
+            </optgroup>
+        </select>
+
+        <br><br>
+
     <label for="add-item-for">Name of item:</label>
     <input type="text" id="itemName">
 
     <br><br>
 
-    Price: <input type="text" id="itemPrice">
+    Price (if applicable): <input type="text" id="itemPrice">
 
     <br><br>
 
     <button class="button" onclick="addItemSubmitted()">Submit</button>
 
-    <br><br>
-    
-    Added: <input type="text" id="postItemName"> <input type="text" id="postItemPrice">
-
+    <div id="itemAddedConfirmation"></div>
 
 
 </body>

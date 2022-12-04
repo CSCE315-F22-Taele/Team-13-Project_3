@@ -15,20 +15,34 @@
     
     <link rel="stylesheet" type="text/css" href="managerThings.css" id="page_style"/>
     <h1>Update Price</h1>
-    Name of item:
-    <input type="text" id="update-price-item-name">
-    
     <br><br>
-    
-    Price: <input type="text" id="update-price-new-price">
-    
+
+    You can only update the price of Menu Pizzas and Drinks.
+
     <br><br>
-    
-    <button class="button" onclick="updatePriceSubmitted()">Submit</button>
-    
-    <br><br>
-    
-    Updated the following item with price: <input type="text" id="postUpdateItem"> <input type="text" id="postUpdatePrice">
+
+            <label for="itemType">Type of item:</label>
+            <select name="itemType" id="itemType">
+                <optgroup label="Has a Price">
+                    <option value="pizza">Pizza</option>
+                    <option value="drinks">Drinks</option>
+                </optgroup>
+            </select>
+            
+            <br><br>
+            
+            <label for="add-item-for">Name of item:</label>
+            <input type="text" id="itemName">
+            
+            <br><br>
+            
+            Price: <input type="text" id="itemPrice">
+            
+            <br><br>
+            
+            <button class="button" onclick="updateItemSubmitted()">Submit</button>
+            
+            <div id="itemUpdatedConfirmation"></div>
 
 </body>
 </html>
