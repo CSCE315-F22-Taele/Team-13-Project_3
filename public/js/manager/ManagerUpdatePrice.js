@@ -1,7 +1,22 @@
-function updatePriceSubmitted() {
-  itemNameVal = document.getElementById("update-price-item-name").value;
-  document.getElementById("postUpdateItem").setAttribute("value", itemNameVal); // Copy the value
+// You have variables for the table (itemTypeSub), item name (itemNameVal), and price (itemPriceVal)
 
-  itemPriceVal = document.getElementById("update-price-new-price").value;
-  document.getElementById("postUpdatePrice").setAttribute("value", itemPriceVal); // Copy the value
+var itemTypeSub = "";
+var itemNameVal = "";
+var itemPriceVal = "";
+
+function updateItemSubmitted() {
+  itemTypeSub = document.getElementById("itemType").value;
+  itemNameVal = document.getElementById("itemName").value;
+  itemPriceVal = document.getElementById("itemPrice").value;
+  if (itemPriceVal == ""){
+    itemPriceVal = "N/A";
+  }
+
+  /*
+    DATABASE CODE HERE
+  
+  */
+
+  const itemUpdated = document.getElementById("itemUpdatedConfirmation");
+  itemUpdated.innerHTML = "Updated: " + itemNameVal + ", price: " + itemPriceVal + ", in database table: " + itemTypeSub;
 }

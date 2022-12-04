@@ -17,18 +17,18 @@
     <link rel="stylesheet" type="text/css" href="managerThings.css" id="page_style"/>
     <h1>Manager restock inventory</h1>
 
+    * Restock is defined as the item's inventory being less than 100 units.
+    
+    <br>
     The following items need to be restocked:
 
-    <br>
-    --------------------------------------------------------------------------------------------------------------------
-    <br>
-
-    None. (This is displayed when no items are considered to be in need of restocking.)
+    <button class="button" onclick="checkInventoryRestock()">Check inventory</button>
 
     <br>
-    --------------------------------------------------------------------------------------------------------------------
-    <br>
-    * Restock is defined as the item's inventory being less than 100 units.
+
+    <div id="restockItemsDisplay"></div>
+    
+    
 
 </body>
 </html>

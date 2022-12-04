@@ -1,11 +1,13 @@
-function viewItemSubmitted() {
+var startDateVal = "";
+var endDateVal = "";
+var stringOfSales = "";
+function viewSalesSubmitted() {
   startDateVal = document.getElementById("view-sales-start-date").value;
-
-  document.getElementById("postStartDate").setAttribute("value", startDateVal); // Copy the value
-
   endDateVal = document.getElementById("view-sales-end-date").value;
 
-  document.getElementById("postEndDate").setAttribute("value", endDateVal); // Copy the value
+  // DATABASE CODE HERE
+  // can use stringOfSales to hold the information, or however you want to organize it
 
-  document.getElementById("restock-output").innerHTML = "<h3>Sales Report</h3> None. (This is displayed when no items have been sold.)";
+  const sales = document.getElementById("sales-output");
+  sales.innerHTML = stringOfSales;
 }

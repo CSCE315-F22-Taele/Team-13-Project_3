@@ -1,13 +1,22 @@
-// function submitted() {
-//   formValue = document.getElementsByName("firstname")[0].value;
-//   document.getElementsByName("firstname")[1].setAttribute("value", formValue); // Copy the value
-//   return false;
-// }
+// You have variables for the table (itemTypeSub), item name (itemNameVal), and price (itemPriceVal)
+
+var itemTypeSub = "";
+var itemNameVal = "";
+var itemPriceVal = "";
 
 function addItemSubmitted() {
+  itemTypeSub = document.getElementById("itemType").value;
   itemNameVal = document.getElementById("itemName").value;
-  document.getElementById("postItemName").setAttribute("value", itemNameVal); // Copy the value
-
   itemPriceVal = document.getElementById("itemPrice").value;
-  document.getElementById("postItemPrice").setAttribute("value", itemPriceVal); // Copy the value
+  if (itemPriceVal == ""){
+    itemPriceVal = "N/A";
+  }
+
+  /*
+    DATABASE CODE HERE
+
+  */
+
+  const itemAdded = document.getElementById("itemAddedConfirmation");
+  itemAdded.innerHTML = "Added: " + itemNameVal + ", price: " + itemPriceVal + ", in database table: " + itemTypeSub;
 }
