@@ -12,8 +12,18 @@ app.use(express.json());
 app.use(express.urlencoded({extended : false}));
 
 // create
-app.post('/insert', (req, res) => {
-    console.log(request.body);
+app.post('/addItem', (req, res) => {
+    console.log("item type: " + req.body.itemType);
+    console.log("item name: " + req.body.itemName);
+    console.log("item price: " + req.body.itemPrice);
+
+    const db = dbConnect.getDbConnectInstance();
+    try {
+        db.addItem(req.body.itemType, req.body.itemName, req.body.itemPrice);
+    } catch (error) {
+        console.log(error);
+    }
+    
 });
 
 // read
