@@ -17,17 +17,15 @@ app.post('/insert', (req, res) => {
 });
 
 // read
-app.get('/getTest', (req, res) =>{
+app.post('/viewTable', (req, res) =>{
     const db = dbConnect.getDbConnectInstance();
-
-    const result = db.getTestData();
-    // console.log(result);
+    console.log("body: " + req.body.tableName);
+    const result = db.getTableData(String(req.body.tableName));
     
     result
     .then(data => res.json({data : data}))
     .catch(err => console.log(err));
     
-    // console.log(data);
 });
 
 // update

@@ -26,20 +26,16 @@ class DbConnect {
     return instance ? instance : new DbConnect();
   }
 
-  async getTestData() {
+  async getTableData(tableName) {
     try {
       const response = await new Promise((resolve, reject) =>{
-        const query = "SELECT * FROM cheese";
-        // SELECT * FROM crust WHERE id = ?
-
-        pool.query(query /*[id]*/, (err, results) =>{
+      const query = 'SELECT * FROM ' + tableName;
+      
+        pool.query(query, (err, results) =>{
           if (err) reject(new Error(err.message));
           resolve(results);
         });
-        
-
       });
-      console.log(response);
     
       return response;
       
@@ -48,5 +44,6 @@ class DbConnect {
     }
   }
 }
+
 
 module.exports = DbConnect;
