@@ -69,7 +69,7 @@ class DbConnect {
         console.log("No price or name given");
         return;
       } else {
-        query = " UPDATE " + type + " SET price = " + price + " WHERE name = " + name;
+        query = " UPDATE " + type + " SET price = '" + price + "' WHERE name = '" + name + "'";
       }
 
       console.log("query: "+query);
@@ -97,6 +97,50 @@ class DbConnect {
     } catch (error) {
       console.log(error);
     }
+  }
+
+  async processOrder(crust, sauce, cheese, drink, toppings){
+
+    var query = "";
+
+
+    try {
+      // crust
+      console.log("crust: " + crust);
+      console.log("cheese: " + cheese);
+      console.log("sauce: " + sauce);
+      console.log("drink: " + drink);
+      console.log("toppings: " + toppings);
+
+      query = "UPDATE crust SET quantity = quantity - 1 WHERE id = " + crust;
+      pool.query(query);
+
+      query = "UPDATE sauce SET quantity = quantity - 1 WHERE id = " + sauce;
+      pool.query(query);
+
+      query = "UPDATE cheese SET quantity = quantity - 1 WHERE id = " + cheese;
+      pool.query(query);
+
+      if (drink != "None"){
+        query = "UPDATE drinks SET quantity = quantity - 1 WHERE id = " + drink;
+        pool.query(query);
+      }
+      
+      if (toppings != null){
+        // comma separate values from string
+
+        const toppingsArray = toppings.split(",");
+
+        toppingsArray.forEach(topping => {
+          query = "UPDATE toppings SET quantity = quantity - 1 WHERE id = " + topping;
+          pool.query(query);
+        });
+      }
+      
+    } catch (error) {
+      console.log(error);
+    }
+
   }
 }
 
