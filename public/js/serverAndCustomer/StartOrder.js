@@ -31,10 +31,16 @@ function changeScreenForToppings() {
 
 function changeScreenForBYODone() {
   window.location.href = "../../html/serverAndCustomer/StartOrder.html";
+  var temp = localStorage.getItem('price');
+  localStorage.setItem('price',  8.99);
 }
+
+
 function changeScreenForServer() {
   window.location.href = "../serverAndCustomer/StartOrder.html";
 } 
+
+
 // localStorage.setItem('crustType', 'None');
 // localStorage.setItem('crustID', -1);
 
@@ -48,6 +54,7 @@ function changeScreenForServer() {
 // localStorage.setItem('toppingID', '-1');
 
 localStorage.setItem('drinkType', 'None');
+localStorage.setItem('price', 0.00);
 // localStorage.setItem('drinkID', -1);
 
 
@@ -55,6 +62,9 @@ function cheesePizzaChosen() {
   regularCrustChosen();
   traditionalSauceChosen();
   regularCheeseChosen();
+  var temp = localStorage.getItem('price');
+  localStorage.setItem('price',  6.79);
+  document.getElementById('total').innerHTML = "$" + localStorage.getItem('price');
 }
 
 function pepperoniPizzaChosen() {
@@ -62,6 +72,9 @@ function pepperoniPizzaChosen() {
   traditionalSauceChosen();
   regularCheeseChosen();
   pepperoniChosen();
+  var temp = localStorage.getItem('price');
+  localStorage.setItem('price',  6.79);
+  document.getElementById('total').innerHTML = "$" + localStorage.getItem('price');
 }
 
 function regularCrustChosen() {
@@ -72,6 +85,8 @@ function regularCrustChosen() {
 function cauliflowerCrustChosen() {
   localStorage.setItem('crustType', 'Cauliflower Crust');
   localStorage.setItem('crustID', 2);
+  var temp = localStorage.getItem('price');
+  localStorage.setItem('price',  2.99);
 }
 
 function traditionalSauceChosen() {
@@ -85,7 +100,6 @@ function alfredoSauceChosen() {
 }
 
 function zestySauceChosen() {
-  order.setSauce(2);
   localStorage.setItem('sauceType', 'Zesty Red');
   localStorage.setItem('sauceID', 3);
 }
@@ -201,16 +215,22 @@ function sirachaChosen() {
 function fountainDrinkChosen() {
   localStorage.setItem('drinkType', '22oz');
   localStorage.setItem('drinkID', 1);
+  var temp = localStorage.getItem('price');
+  localStorage.setItem('price', 2.39);
 }
 
 function waterChosen() {
   localStorage.setItem('drinkType', 'Water Bottle');
   localStorage.setItem('drinkID', 2);
+  var temp = localStorage.getItem('price');
+  localStorage.setItem('price', 2.39);
 }
 
 function gatoradeChosen() {
   localStorage.setItem('drinkType', 'Gatorade');
   localStorage.setItem('drinkID', 3);
+  var temp = localStorage.getItem('price');
+  localStorage.setItem('price', 2.39);
 }
 
 function displayOrder() {
