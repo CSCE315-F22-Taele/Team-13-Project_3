@@ -4,6 +4,9 @@ var itemTypeSub = "";
 var itemNameVal = "";
 var itemPriceVal = "";
 
+/**
+ * update the price of the item.
+ */
 function updateItemSubmitted() {
   itemTypeSub = document.getElementById("itemType").value;
   itemNameVal = document.getElementById("itemName").value;

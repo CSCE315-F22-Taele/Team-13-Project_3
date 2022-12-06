@@ -2,6 +2,9 @@ const { json } = require("express");
 
 var stringOfInventory = "";
 
+/**
+ * make a query for the table that the user requested
+ */
 function startView() {
   
   const tableName = document.getElementById('tableNameViewInv').value;
@@ -19,6 +22,9 @@ function startView() {
   
 }
 
+/**
+ * print the information from the table that the query returned
+ */
 function viewInventorySubmitted(data) {
   stringOfInventory += "";
   // alert(data);
