@@ -225,5 +225,21 @@ function processOrder() {
   const crust = localStorage.getItem('crustID');
   const sauce = localStorage.getItem('sauceID');
   const cheese = localStorage.getItem('cheeseID');
-  const drink = localStorage.getItem('drinkID');
+  const drink = localStorage.getItem('drinkID');      // if none: null
+  const toppings = localStorage.getItem('toppingID'); // if none: null
+
+  fetch('http://localhost:3000/processOrder', {
+    headers: {
+      'Content-type': 'application/json'
+    },
+    method: 'POST',
+    body: JSON.stringify({
+      crust: crust,
+      sauce: sauce,
+      cheese: cheese,
+      drink: drink,
+      toppings: toppings
+    })
+  })
+  .catch(err => alert(err));
 }
