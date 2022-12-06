@@ -1,0 +1,30 @@
+[Virtual] Final Presentation powerpoint on canvas
+- Prerecordings are real - 8-10min - Due 12/12 11:59pm
+	1. Member introductions: Names and roles
+	2. Problem statement: share problem and why it's important - why solution is needed
+	3. Tech stack - share frontend and backend choices and why
+	4. Accessibility Features - persona (Kevin, deaf) and accessibility features 
+	5. Project management - Talk about jira, backlogs, burndown charts
+	6. Usability reports: user study and expert panel - how we addressed user feedback
+	7. Demo (shortened) - customer, server, manager, accessibility - 1-2 minutes
+- Must use Zoom or Google Meet, must be entirely co-located or entirely virtual
+- Everyone must present
+- Presenter visibility - everyone mst be visible - camera ON
+- Powerpoint or Google Slides
+- At least business casual
+
+Grading policy
+- See powerpoint
+
+A Wednesday InClass Activity allows us to get our slides proofread
+
+-----------------------------------------------------------------------------
+[In Person]
+Actual Demo
+Friday 10am-12pm
+8 minutes
+
+Accessibility features??
+Accessibility score requires that we use a different device - will explain if needed
+
+=============================================================================
