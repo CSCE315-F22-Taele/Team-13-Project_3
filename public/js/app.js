@@ -40,6 +40,20 @@ app.post('/viewTable', (req, res) =>{
     
 });
 
+app.post('/viewSales', (req, res) => {
+    const db = dbConnect.getDbConnectInstance();
+
+    const startDate = req.body.startDate;
+    const endDate = req.body.endDate;
+
+
+    const result = db.getSalesData(startDate, endDate);
+
+    result
+    .then(data => res.json({data : data}))
+    .catch(err => console.log(error));
+})
+
 // update
 
 app.post('/processOrder', (req, res) =>{

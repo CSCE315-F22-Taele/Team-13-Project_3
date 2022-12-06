@@ -225,6 +225,8 @@ function displayOrder() {
 
 function processOrder() {
 
+  /* TODO: UPDATE ORDER_HISTORY*/
+
   console.log('crustID:' + localStorage.getItem('crustID'));
   const crust = localStorage.getItem('crustID');
   const sauce = localStorage.getItem('sauceID');

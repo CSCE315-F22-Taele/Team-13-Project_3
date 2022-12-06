@@ -77,6 +77,24 @@ class DbConnect {
     }
   }
 
+  async getSalesData(startDate, endDate){
+    try {
+      const response = await new Promise((resolve, reject) =>{
+        const query = "SELECT * FROM order_history WHERE date BETWEEN '"+startDate+"' and '"+endDate+"'";
+
+        pool.query(query, (err, results) => {
+          if (err) reject(new Error(err.message));
+          resolve(results);
+        });
+      });
+
+      return response;
+      
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   async processOrder(crust, sauce, cheese, drink, toppings){
 
     var query = "";

@@ -5,7 +5,7 @@ var stringOfInventory = "";
 function startView() {
   
   const tableName = document.getElementById('tableNameViewInv').value;
-  alert(tableName);
+  // alert(tableName);
   fetch('http://localhost:3000/viewTable', {
     headers: {
       'Content-type': 'application/json'
