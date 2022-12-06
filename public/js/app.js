@@ -26,6 +26,8 @@ app.post('/addItem', (req, res) => {
     
 });
 
+// app.post('/updatePrice')
+
 // read
 app.post('/viewTable', (req, res) =>{
     const db = dbConnect.getDbConnectInstance();

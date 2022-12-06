@@ -3,7 +3,7 @@ Spin 'n Stone CSCE912-13
 
 How to run:
 
-1. Make sure you have a '.env' file with contents:
+1. Make sure you have a '.env' file in the js folder with contents:
 
     PSQL_HOST = 'csce-315-db.engr.tamu.edu'
     PSQL_USER = 'csce315_912_li'

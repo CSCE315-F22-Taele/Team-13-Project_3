@@ -9,6 +9,7 @@ function changeScreenForDrinks() {
 
 function changeScreenForFinishOrder() {
   window.location.href = "../../html/serverAndCustomer/OrderPlaced.html";
+  processOrder(); // updates database
 }
 
 function changeScreenForCrust(){
@@ -218,4 +219,11 @@ function displayOrder() {
   document.getElementById("display-topping").innerHTML = "Topping(s): " + localStorage.getItem('toppingType');
   document.getElementById("display-drink").innerHTML = "Drink: " + localStorage.getItem('drinkType');
   localStorage.clear();
+}
+
+function processOrder() {
+  const crust = localStorage.getItem('crustID');
+  const sauce = localStorage.getItem('sauceID');
+  const cheese = localStorage.getItem('cheeseID');
+  const drink = localStorage.getItem('drinkID');
 }
