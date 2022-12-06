@@ -69,7 +69,7 @@ class DbConnect {
         console.log("No price or name given");
         return;
       } else {
-        query = " UPDATE " + type + " SET price = " + price + " WHERE name = " + name;
+        query = " UPDATE " + type + " SET price = '" + price + "' WHERE name = '" + name + "'";
       }
 
       console.log("query: "+query);
