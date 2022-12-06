@@ -1,35 +1,63 @@
 
+/**
+ * Changes the screen to the BYO
+ */
 function changeScreenForBYO() {
   window.location.href = "../../html/serverAndCustomer/StartBYO.html";
 }
 
+/**
+ * Changes the screen to Drink Selection
+ */
 function changeScreenForDrinks() {
   window.location.href = "../../html/serverAndCustomer/DrinkSelection.html";
 }
 
+/**
+ * Changes the screen to Order Placed
+ */
 function changeScreenForFinishOrder() {
   window.location.href = "../../html/serverAndCustomer/OrderPlaced.html";
 }
 
+/**
+ * Changes the screen to Crust Selection
+ */
 function changeScreenForCrust(){
   window.location.href = "../../html/serverAndCustomer/BYOCrust.html";
 }
 
+/**
+ * Changes the screen to Sauce Selection
+ */
 function changeScreenForSauce() {
   window.location.href = "../../html/serverAndCustomer/BYOSauce.html";
 }
 
+/**
+ * Changes the screen to Cheese Selection
+ */
 function changeScreenForCheese() {
   window.location.href = "../../html/serverAndCustomer/BYOCheese.html";
 }
 
+/**
+ * Changes the screen to Toppings Selection
+ */
 function changeScreenForToppings() {
   window.location.href = "../../html/serverAndCustomer/BYOToppings.html";
 }
 
+/**
+ * Changes the screen to Start Order
+ */
 function changeScreenForBYODone() {
   window.location.href = "../../html/serverAndCustomer/StartOrder.html";
 }
+
+/**
+ * Changes the screen to Start Order
+ */
 function changeScreenForServer() {
   window.location.href = "../serverAndCustomer/StartOrder.html";
 } 
@@ -48,13 +76,18 @@ function changeScreenForServer() {
 localStorage.setItem('drinkType', 'None');
 // localStorage.setItem('drinkID', -1);
 
-
+/**
+ * Indicates cheese pizza chosen, update order accordingly
+ */
 function cheesePizzaChosen() {
   regularCrustChosen();
   traditionalSauceChosen();
   regularCheeseChosen();
 }
 
+/**
+ * Indicates pepperoni pizza chosen, update order accordingly
+ */
 function pepperoniPizzaChosen() {
   regularCrustChosen();
   traditionalSauceChosen();
@@ -62,42 +95,66 @@ function pepperoniPizzaChosen() {
   pepperoniChosen();
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function regularCrustChosen() {
   localStorage.setItem('crustType', 'Regular Crust');
   localStorage.setItem('crustID', 0);
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function cauliflowerCrustChosen() {
   localStorage.setItem('crustType', 'Cauliflower Crust');
   localStorage.setItem('crustID', 1);
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function traditionalSauceChosen() {
   localStorage.setItem('sauceType', 'Traditional Red');
   localStorage.setItem('sauceID', 0);
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function alfredoSauceChosen() {
   localStorage.setItem('sauceType', 'Alfredo');
   localStorage.setItem('sauceID', 1);
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function zestySauceChosen() {
   order.setSauce(2);
   localStorage.setItem('sauceType', 'Zesty Red');
   localStorage.setItem('sauceID', 2);
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function regularCheeseChosen() {
   localStorage.setItem('cheeseType', 'House Blend');
   localStorage.setItem('cheeseID', 0);
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function parmesanChosen() {
   localStorage.setItem('cheeseType', 'Parmesan');
   localStorage.setItem('cheeseID', 1);
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function addTopping(name, id) {
   var temp1, temp2;
   if (localStorage.getItem('toppingType') == null) {
@@ -111,106 +168,181 @@ function addTopping(name, id) {
   localStorage.setItem('toppingID', temp2);
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function hamChosen() {
   addTopping("Black Forest Ham", '0');
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function sausageChosen() {
   addTopping("Italian Sausage", "1");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function meatballChosen() {
   addTopping("Meatballs", "2");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function pepperoniChosen() {
   addTopping("Pepperoni", "3");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function chickenChosen() {
   addTopping("Smoked Chicken", "4");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function bananaPepperChosen() {
   addTopping("Banana Peppers", "5");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function olivesChosen() {
   addTopping("Black Olives", "6");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function greenPepperChosen() {
   addTopping("Green Peppers", "7");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function jalepenosChosen() {
   addTopping("Jalepenos", "8");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function mushroomsChosen() {
   addTopping("Mushrooms", "9");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function onionsChosen() {
   addTopping("Onions", "10");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function pineappleChosen() {
   addTopping("Pineapple", "11");
 }
 
 
+/**
+ * adds this item to the BYO order
+ */
 function garlicChosen() {
   addTopping("Garlic", "12");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function spinachChosen() {
   addTopping("Spinach", "13");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function tomatoChosen() {
   addTopping("Tomato", "14");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function broccoliChosen() {
   addTopping("Broccoli", "15");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function bbqChosen() {
   addTopping("BBQ Drizzle", "16");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function oliveOilChosen() {
   addTopping("Olive Oil Drizzle", "17");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function oreganoChosen() {
   addTopping("Oregano Drizzle", "18");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function ranchChosen() {
   addTopping("Ranch Drizzle", "19");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function sirachaChosen() {
   addTopping("Siracha Drizzle", "20");
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function fountainDrinkChosen() {
   localStorage.setItem('drinkType', '22oz');
   localStorage.setItem('drinkID', 0);
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function waterChosen() {
   localStorage.setItem('drinkType', 'Water Bottle');
   localStorage.setItem('drinkID', 1);
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function gatoradeChosen() {
   localStorage.setItem('drinkType', 'Gatorade');
   localStorage.setItem('drinkID', 2);
 }
 
+/**
+ * adds this item to the BYO order
+ */
 function displayOrder() {
   document.getElementById("display-crust").innerHTML = "Crust: " + localStorage.getItem('crustType');
   document.getElementById("display-sauce").innerHTML = "sauce: " + localStorage.getItem('sauceType');
