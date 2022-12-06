@@ -1,3 +1,7 @@
+/**
+ * Change the screen based on what the manager chooses to act on.
+ * @param value the action chosen by manager
+ */
 function updateManagerChosenAction(value) {
   localStorage.setItem("manager-chosen-action-name", value);
   switch (localStorage.getItem("manager-chosen-action-name")) {

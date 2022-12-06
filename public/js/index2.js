@@ -1,3 +1,6 @@
+/**
+ * The landing page for the application.
+ */
 function getStarted() {
   // Uncomment version 1 (and comment out version 2) for LOCAL TESTING
   // window.location.href = "../public/html/other/UserSelector.html";
