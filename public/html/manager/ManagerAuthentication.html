@@ -8,6 +8,8 @@
 </head>
 <body>
     <script src="../../js/manager/ManagerAuthentication.js"></script>
+    <link rel="stylesheet" type="text/css" href="allButToppings.css" id="page_style" />
+
     
     <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="../../../translate.js"></script>
@@ -20,13 +22,20 @@
     <!-- <input type="text" id="man-pw"> -->
     <input type="password" id="man-pw" name="password"><br />
     
-    <br><br>
-
     <button class="button" onclick="manPassSubmitted()">Submit</button>
 
     <div id="incorrect-pw"></div>
 
-    <!-- button option to change screen back to the user selector -->
+    <br><br>
+
+    Or, if you prefer...
+
+    <br>
+
+    <button class="button" onclick="window.location.href='https:/\/github.com/login/oauth/authorize?client_id=3758f6d1f76b25630586&redirect_uri=https:/\/team-13-project-3.onrender.com/';">Login with GitHub</button>
+
+    <br><br><br>
+
     <button class="button" id="button-back" onclick="changeScreenForUserSelector()">Back to User Selector</button>
 
 </body>
