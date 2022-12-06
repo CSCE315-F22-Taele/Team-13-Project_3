@@ -26,6 +26,19 @@ app.post('/addItem', (req, res) => {
     
 });
 
+app.post('/updatePrice', (req, res) => {
+    console.log("item type: " + req.body.itemType);
+    console.log("item name: " + req.body.itemName);
+    console.log("item price: " + req.body.itemPrice);
+
+    const db = dbConnect.getDbConnectInstance();
+    try {
+        db.updatePrice(req.body.itemType, req.body.itemName, req.body.itemPrice);
+    } catch (error) {
+        console.log(error);
+    }
+});
+
 // read
 app.post('/viewTable', (req, res) =>{
     const db = dbConnect.getDbConnectInstance();
