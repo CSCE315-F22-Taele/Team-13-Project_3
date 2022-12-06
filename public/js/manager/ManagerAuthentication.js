@@ -1,6 +1,6 @@
 function manPassSubmitted() {
   manPassword = document.getElementById("man-pw").value;
-  if (manPassword == "CorrectHorseBatteryStapl3"){
+  if (manPassword == "PPP315"){
     window.location.href = "./ManagerOptions.html";
   }
   else{
