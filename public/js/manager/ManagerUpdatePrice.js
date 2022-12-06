@@ -17,6 +17,24 @@ function updateItemSubmitted() {
   
   */
 
+    if (itemPriceVal == "") {
+      itemPriceVal = "N/A";
+    }
+
+  fetch('http://localhost:3000/updatePrice', {
+    headers: {
+      'Content-type': 'application/json'
+    },
+    method: 'POST',
+    body: JSON.stringify({
+      itemType: itemTypeSub,
+      itemName: itemNameVal,
+      itemPrice: itemPriceVal
+    })
+  })
+
   const itemUpdated = document.getElementById("itemUpdatedConfirmation");
   itemUpdated.innerHTML = "Updated: " + itemNameVal + ", price: " + itemPriceVal + ", in database table: " + itemTypeSub;
+  
+  // .catch(err => alert(err));
 }
