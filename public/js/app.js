@@ -53,6 +53,23 @@ app.post('/viewTable', (req, res) =>{
 
 // update
 
+app.post('/processOrder', (req, res) =>{
+    const db = dbConnect.getDbConnectInstance();
+
+    const crust = req.body.crust;
+    const sauce = req.body.sauce;
+    const cheese = req.body.cheese;
+    const drink = req.body.drink;      // if none: null
+    const toppings = req.body.toppings; // if none: null
+
+    try {
+        db.processOrder(crust, sauce, cheese, drink, toppings);
+    } catch (error) {
+        console.log(error);
+    }
+    
+})
+
 
 // delete
 
