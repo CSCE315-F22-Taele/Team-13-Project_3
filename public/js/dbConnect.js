@@ -58,6 +58,28 @@ class DbConnect {
     }
   }
 
+  async updatePrice(type, name, price){
+    try{
+      console.log(type);
+      console.log(name);
+      console.log(price);
+      
+      var query = "";
+      if (price == "N/A" || name == "N/A") {
+        console.log("No price or name given");
+        return;
+      } else {
+        query = " UPDATE " + type + " SET price = " + price + " WHERE name = " + name;
+      }
+
+      console.log("query: "+query);
+      pool.query(query);
+    }
+    catch(error) {
+      console.log(error);
+    }
+  }
+
 
   async getTableData(tableName) {
     try {
