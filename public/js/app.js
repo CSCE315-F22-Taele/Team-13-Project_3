@@ -51,6 +51,21 @@ app.post('/viewTable', (req, res) =>{
     
 });
 
+app.post('/restockItem', (req, res) =>{
+    
+    console.log("item type: " + req.body.itemType);
+    console.log("item name: " + req.body.itemName);
+    console.log("item amount: " + req.body.itemAmount);
+    const db = dbConnect.getDbConnectInstance();
+
+    try {
+        db.restockItem(req.body.itemType, req.body.itemName, req.body.itemAmount);
+    } catch (error) {
+        console.log(error);
+    }
+
+})
+
 // update
 
 app.post('/processOrder', (req, res) =>{

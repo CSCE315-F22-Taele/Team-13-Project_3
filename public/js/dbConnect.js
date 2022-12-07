@@ -98,6 +98,27 @@ class DbConnect {
     }
   }
 
+  async restockItem(type, name, amount) {
+    try{
+      console.log(type);
+      console.log(name);
+      console.log(amount);
+
+      if (type == "" || name == "" || amount == "" ) {
+        console.log("Field left blank");
+        return;
+      }
+
+      var query = "UPDATE " + type + " SET quantity = quantity + " + amount + " WHERE name = " + name; 
+
+      console.log("query: "+query);
+      pool.query(query);
+    }
+    catch(error) {
+      console.log(error);
+    }
+  }
+
   /**
    * Manager Function: Gets all data from a database table
    * @param  {*} tableName
