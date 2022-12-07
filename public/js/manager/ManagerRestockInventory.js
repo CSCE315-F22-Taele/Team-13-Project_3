@@ -1,5 +1,6 @@
 var stringOfItemsNeedingRestock = "";
 
+var tableName = "";
 var itemName = "";
 var itemQuantityToRestock = "";
 
@@ -21,6 +22,7 @@ function checkInventoryRestock(){
  * Functionality 2: Allows manager to restock a specific item
  */
 function quantityItemSubmitted(){
+    tableName = document.getElementById("tableNameRestock").value;
     itemName = document.getElementById("itemName").value;
     itemQuantityToRestock = document.getElementById("quantityAdded").value;
 
