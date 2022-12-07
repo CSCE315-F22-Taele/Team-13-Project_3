@@ -21,7 +21,10 @@
     <button class="button" id="button-drink-selection" onclick="changeScreenForFinishOrder()">Finish Order</button>
     <!-- <a href="startBYO.html">BYO Pizza</a>
         <a href="drinkSelection.html">Drinks</a> -->
-    <h1 id="total">$0.00</h1>
+    <h1 id="total">$<script>setInterval(function() {
+        var x = localStorage.getItem('price');
+        document.getElementById('total').innerHTML = "$" + x;
+    }, 1000);</script></h1>
     <link rel="stylesheet" type="text/css" href="StartOrder.css" id="page_style"/>
 </body>
 </html>
