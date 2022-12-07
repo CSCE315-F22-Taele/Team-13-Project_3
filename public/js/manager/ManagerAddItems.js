@@ -4,6 +4,9 @@ var itemTypeSub = "";
 var itemNameVal = "";
 var itemPriceVal = "";
 
+/**
+ * adds the item that the manager requested.
+ */
 function addingItem(){
 
   itemTypeSub = document.getElementById("itemType").value;
@@ -29,6 +32,9 @@ function addingItem(){
   .catch(err => alert(err));
 }
 
+/**
+ * grabs the values that the manager submitted for adding an item.
+ */
 function addItemSubmitted() {
   itemTypeSub = document.getElementById("itemType").value;
   itemNameVal = document.getElementById("itemName").value;

@@ -1,3 +1,6 @@
+/**
+ * verifies that the password is correct.
+ */
 function manPassSubmitted() {
   manPassword = document.getElementById("man-pw").value;
   if (manPassword == "PPP315"){
@@ -9,6 +12,9 @@ function manPassSubmitted() {
   }
 }
 
+/**
+ * takes user back, because they are not a manager.
+ */
 function changeScreenForUserSelector(){
   window.location.href = "../../html/other/UserSelector.html";
 }

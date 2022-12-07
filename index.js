@@ -15,6 +15,12 @@ const clientID = "3758f6d1f76b25630586";
 const clientSecret = "8385ae3163f5147c751c9e2022a3c583da62b973";
 
 // Declare the redirect route
+/**
+ * Gets the redirect route for the OAuth API
+ * @param  {string} /oauth/redirect
+ * @param  {*} req the request
+ * @param  {*} res the result
+ */
 app.get("/oauth/redirect", (req, res) => {
   // The req.query object has the query params that
   // were sent to this route. We want the `code` param
@@ -38,6 +44,10 @@ app.get("/oauth/redirect", (req, res) => {
   });
 });
 
+/**
+ * Outputs to the console the port being used; useful for coders and managers alike.
+ * @param {number} port the port number being used
+ */
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
