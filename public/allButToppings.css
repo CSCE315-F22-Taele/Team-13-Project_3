@@ -25,5 +25,9 @@ body {
 }
 
 .button:hover {
+    background-color: darkgoldenrod;
+}
+
+.button:focus {
     background-color: darkgray;
 }
