@@ -81,13 +81,15 @@ class DbConnect {
     try {
       const response = await new Promise((resolve, reject) =>{
         const query = "SELECT * FROM order_history WHERE date BETWEEN '"+startDate+"' and '"+endDate+"'";
-
+        console.log(query);
         pool.query(query, (err, results) => {
           if (err) reject(new Error(err.message));
           resolve(results);
         });
       });
 
+      console.log(response);
+      
       return response;
       
     } catch (error) {
