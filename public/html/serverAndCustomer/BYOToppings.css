@@ -8,20 +8,39 @@ body {
     height: 100%;
 }
 
-.button {
-    width: 250px;
+.toppingbutton {
+    width: 200px;
     margin:auto;
     background-color: #afa84c;
-    border: 10px solid rgb(61, 61, 61);
+    border: 8px solid rgb(61, 61, 61);
     border-radius: 20px;
     color: rgb(61, 61, 61);
-    padding: 16px 32px;
+    padding: 4px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 18px;
+    font-size: 14px;
     cursor: pointer;
     display: block;
+}
+.button {
+  width: 200px;
+  margin:auto;
+  background-color: #afa84c;
+  border: 8px solid rgb(61, 61, 61);
+  border-radius: 20px;
+  color: rgb(61, 61, 61);
+  padding: 24px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  display: block;
+}
+
+.toppingbutton:hover {
+  background-color: darkgoldenrod;
 }
 
 .button:hover {
