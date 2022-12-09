@@ -2,6 +2,17 @@ const express = require("express");
 const app = express();
 app.use(express.static(__dirname + "/public"));
 const port = 3000;
+
+const cors = require("cors");
+const dotenv = require("dotenv");
+const { response } = require("express");
+dotenv.config();
+
+const dbConnect = require("./dbConnect");
+
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 // app.get("/", (req, res) => {
 //   res.send("world!");
 // });
@@ -52,16 +63,7 @@ app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
 
-const cors = require("cors");
-const dotenv = require("dotenv");
-const { response } = require("express");
-dotenv.config();
 
-const dbConnect = require("./dbConnect");
-
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 
 // create
 app.post("/addItem", (req, res) => {
@@ -99,6 +101,20 @@ app.post("/viewTable", (req, res) => {
   result
     .then((data) => res.json({ data: data }))
     .catch((err) => console.log(err));
+});
+
+app.post('/viewSales', (req, res) => {
+  const db = dbConnect.getDbConnectInstance();
+
+  const startDate = req.body.startDate;
+  const endDate = req.body.endDate;
+
+
+  const result = db.getSalesData(startDate, endDate);
+
+  result
+  .then(data => res.json({data : data}))
+  .catch(err => console.log(err));
 });
 
 app.post("/restockItem", (req, res) => {

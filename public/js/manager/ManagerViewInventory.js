@@ -2,13 +2,10 @@ const { json } = require("express");
 
 var stringOfInventory = "";
 
-/**
- * make a query for the table that the user requested
- */
 function startView() {
   
   const tableName = document.getElementById('tableNameViewInv').value;
-  alert(tableName);
+  // alert(tableName);
   fetch('http://localhost:3000/viewTable', {
     headers: {
       'Content-type': 'application/json'
@@ -22,17 +19,15 @@ function startView() {
   
 }
 
-/**
- * print the information from the table that the query returned
- */
 function viewInventorySubmitted(data) {
   stringOfInventory += "";
   // alert(data);
 
-  const displayInventory = document.getElementById("inventoryDisplay");
+  var displayInventory = document.getElementById("inventoryBody");
+  //alert(displayInventory);
   // alert("inView");
   if (data.length === 0){
-    table.innerHTML = "<tr><td class='no data' colspan='3'>No Data</td></tr>";
+    displayInventory.tbody.innerHTML = "<tr><td class='no data' colspan='3'>No Data</td></tr>";
   } else {
     
     var tableHtml = "";

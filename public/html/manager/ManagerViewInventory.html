@@ -34,7 +34,19 @@
     
     <button class="button" onclick="startView()">View Inventory</button>
 
-    <div id="inventoryDisplay"></div>
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </thead>
+        <tbody id="inventoryBody">
+            <tr>
+                <td class='no data' colspan='4'>No Data</td>
+            </tr>
+        </tbody>
+    </table>
 
 
 </body>
