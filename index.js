@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 const { response } = require("express");
 dotenv.config();
 
-var cors_proxy = require('cors-anywhere');
+// var cors_proxy = require('cors-anywhere');
 
 const dbConnect = require("./dbConnect");
 
