@@ -1,8 +1,8 @@
 body {
-    background-color: rgb(61, 61, 61);
+    background-color: white;
     text-align: center;
     font-size: 200%;
-    color:white;
+    color:rgb(61, 61, 61);
     margin: 0;
     width: 100%;
     height: 100%;
@@ -12,7 +12,7 @@ body {
     width: 200px;
     margin:auto;
     background-color: #afa84c;
-    border: 10px solid rgb(61, 61, 61);
+    border: 6px solid rgb(61, 61, 61);
     border-radius: 20px;
     color: rgb(61, 61, 61);
     padding: 16px 16px;
