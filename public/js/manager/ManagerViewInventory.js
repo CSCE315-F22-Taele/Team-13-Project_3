@@ -7,10 +7,11 @@ function startView() {
   
   const tableName = document.getElementById('tableNameViewInv').value;
   // alert(tableName);
-  fetch('http://localhost:80/viewTable', {
+  fetch('http://localhost:3000/viewTable', {
     headers: {
       'Content-type': 'application/json'
     },
+    mode: "no-cors",
     method: 'POST',
     body: JSON.stringify({tableName: tableName})
   })
