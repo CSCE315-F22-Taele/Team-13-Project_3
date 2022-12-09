@@ -31,3 +31,7 @@ body {
 .button:focus {
     background-color: darkgray;
 }
+
+.button+.button {
+    margin-top: 10px;
+  }
