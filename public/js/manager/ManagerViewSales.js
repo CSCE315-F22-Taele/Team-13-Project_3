@@ -9,7 +9,6 @@ function startView() {
   endDateVal = document.getElementById("view-sales-end-date").value;
   // alert(startDateVal);
   // alert(endDateVal);
-
   fetch('http://localhost:3000/viewSales', {
     headers: {
       'Content-type': 'application/json'

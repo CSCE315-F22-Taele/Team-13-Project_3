@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 app.use(express.static(__dirname + "/public"));
-const port = 3000;
 
 const cors = require("cors");
 const dotenv = require("dotenv");
@@ -53,14 +52,6 @@ app.get("/oauth/redirect", (req, res) => {
     // redirect the user to the welcome page, along with the access token
     res.redirect(`/welcome.html?access_token=${accessToken}`);
   });
-});
-
-/**
- * Outputs to the console the port being used; useful for coders and managers alike.
- * @param {number} port the port number being used
- */
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
 });
 
 
@@ -147,3 +138,11 @@ app.post("/processOrder", (req, res) => {
     console.log(error);
   }
 });
+
+/**
+ * Outputs to the console the port being used; useful for coders and managers alike.
+ * @param {number} port the port number being used
+ */
+ app.listen(3000, () => console.log('app is running'));
+
+
