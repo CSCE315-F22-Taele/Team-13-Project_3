@@ -7,6 +7,8 @@ const dotenv = require("dotenv");
 const { response } = require("express");
 dotenv.config();
 
+var cors_proxy = require('cors-anywhere');
+
 const dbConnect = require("./dbConnect");
 
 app.use(cors());
@@ -17,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 // });
 
 // Import the axios library, to make HTTP requests
-const axios = require("axios");
+// const axios = require("axios");
 
 // This is the client ID and client secret that you obtained
 // while registering the application
@@ -143,6 +145,11 @@ app.post("/processOrder", (req, res) => {
  * Outputs to the console the port being used; useful for coders and managers alike.
  * @param {number} port the port number being used
  */
- app.listen(3000, () => console.log('app is running'));
+ // app.listen(3000, () => console.log('app is running'));
 
+ cors_proxy.createServer({
+  originWhitelist: [], // Allow all origins
+  requireHeader: ['origin', 'x-requested-with'],
+  removeHeaders: ['cookie', 'cookie2']
+}).listen(3000, () => console.log('app is running'));
 
