@@ -21,7 +21,7 @@ function startView() {
   })
   .then(response => response.json())
   .then(data => viewSalesSubmitted(data['data']))
-  .catch(err => alert(err));
+  .catch(err => console.log(err));
 }
 
 function viewSalesSubmitted(data) {

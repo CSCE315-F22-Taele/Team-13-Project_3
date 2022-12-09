@@ -19,7 +19,7 @@ const pool = new Pool({
  */
 pool.connect((err) =>{
     if (err) {
-        alert(err);
+       console.log(err);
     } else{
         console.log('db has connected');
     }

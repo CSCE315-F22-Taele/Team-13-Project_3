@@ -29,7 +29,7 @@ function addingItem(){
     })
   })
   .then(addItemSubmitted())
-  .catch(err => alert(err));
+  .catch(err => console.log(err));
 }
 
 /**

@@ -421,5 +421,5 @@ function processOrder() {
       price : price
     })
   })
-  .catch(err => alert(err));
+  .catch(err => console.log(err));
 }
