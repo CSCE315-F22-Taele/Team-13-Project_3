@@ -27,3 +27,6 @@ body {
 .button:hover {
     background-color: darkgray;
 }
+.button+.button {
+    margin-top: 10px;
+  }
