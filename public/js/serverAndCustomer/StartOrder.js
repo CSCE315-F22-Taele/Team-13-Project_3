@@ -188,6 +188,7 @@ function addTopping(name, id) {
  */
 function hamChosen() {
   addTopping("Black Forest Ham", '1');
+  document.getElementById("button-black-forest-ham").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -195,6 +196,7 @@ function hamChosen() {
  */
 function sausageChosen() {
   addTopping("Italian Sausage", "2");
+  document.getElementById("button-italian-sausage").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -202,6 +204,7 @@ function sausageChosen() {
  */
 function meatballChosen() {
   addTopping("Meatballs", "3");
+  document.getElementById("button-metball").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -209,6 +212,7 @@ function meatballChosen() {
  */
 function pepperoniChosen() {
   addTopping("Pepperoni", "4");
+  document.getElementById("button-pepperoni").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -216,6 +220,7 @@ function pepperoniChosen() {
  */
 function chickenChosen() {
   addTopping("Smoked Chicken", "5");
+  document.getElementById("button-smoked-chicken").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -223,6 +228,7 @@ function chickenChosen() {
  */
 function bananaPepperChosen() {
   addTopping("Banana Peppers", "6");
+  document.getElementById("button-banana-peppers").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -230,6 +236,7 @@ function bananaPepperChosen() {
  */
 function olivesChosen() {
   addTopping("Black Olives", "7");
+  document.getElementById("button-black-olives").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -237,6 +244,7 @@ function olivesChosen() {
  */
 function greenPepperChosen() {
   addTopping("Green Peppers", "8");
+  document.getElementById("button-green-peppers").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -244,6 +252,7 @@ function greenPepperChosen() {
  */
 function jalepenosChosen() {
   addTopping("Jalepenos", "9");
+  document.getElementById("button-jalepenos").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -251,6 +260,7 @@ function jalepenosChosen() {
  */
 function mushroomsChosen() {
   addTopping("Mushrooms", "10");
+  document.getElementById("button-mushrooms").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -258,6 +268,7 @@ function mushroomsChosen() {
  */
 function onionsChosen() {
   addTopping("Onions", "11");
+  document.getElementById("button-onions").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -265,6 +276,7 @@ function onionsChosen() {
  */
 function pineappleChosen() {
   addTopping("Pineapple", "12");
+  document.getElementById("button-pineapple").style.backgroundColor = '#A5A5A5';
 }
 
 
@@ -273,6 +285,7 @@ function pineappleChosen() {
  */
 function garlicChosen() {
   addTopping("Garlic", "13");
+  document.getElementById("button-roasted-garlic").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -280,6 +293,7 @@ function garlicChosen() {
  */
 function spinachChosen() {
   addTopping("Spinach", "14");
+  document.getElementById("button-spinach").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -287,6 +301,7 @@ function spinachChosen() {
  */
 function tomatoChosen() {
   addTopping("Tomato", "15");
+  document.getElementById("button-tomatoes").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -294,6 +309,7 @@ function tomatoChosen() {
  */
 function broccoliChosen() {
   addTopping("Broccoli", "16");
+  document.getElementById("button-broccoli").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -301,6 +317,7 @@ function broccoliChosen() {
  */
 function bbqChosen() {
   addTopping("BBQ Drizzle", "17");
+  document.getElementById("button-bbq").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -308,6 +325,7 @@ function bbqChosen() {
  */
 function oliveOilChosen() {
   addTopping("Olive Oil Drizzle", "18");
+  document.getElementById("button-olive-oil").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -315,6 +333,7 @@ function oliveOilChosen() {
  */
 function oreganoChosen() {
   addTopping("Oregano Drizzle", "19");
+  document.getElementById("button-oregano").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -322,6 +341,7 @@ function oreganoChosen() {
  */
 function ranchChosen() {
   addTopping("Ranch Drizzle", "20");
+  document.getElementById("button-ranch").style.backgroundColor = '#A5A5A5';
 }
 
 /**
@@ -329,6 +349,7 @@ function ranchChosen() {
  */
 function sirachaChosen() {
   addTopping("Siracha Drizzle", "21");
+  document.getElementById("button-siracha").style.backgroundColor = '#A5A5A5';
 }
 
 /**
