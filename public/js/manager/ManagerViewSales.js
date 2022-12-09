@@ -25,7 +25,7 @@ function startView() {
   .catch(err => alert(err));
 }
 
-function viewSalesSubmitted() {
+function viewSalesSubmitted(data) {
   
   alert("in submit");
   // can use stringOfSales to hold the information, or however you want to organize it
