@@ -19,6 +19,9 @@ function startView() {
   .then(response => response.json())
   .then(data => viewInventorySubmitted(data['data']))
   .catch(err => alert(err));
+
+  const myTestTableID = document.getElementById("table-id-for-testing");
+  myTestTableID.innerHTML = "OH!!!";
   
 }
 
@@ -42,10 +45,11 @@ function viewInventorySubmitted(data) {
       for (var keyName in data.rows[key]){
         var entry = (data.rows[key])[keyName];
         // alert(keyName);
-        tableHtml += `<td>${entry}</td>`;
+        tableHtml += `<td style="text-align:right">${entry}</td>` + "&emsp;" + "&emsp;";
       }
+      
       tableHtml += "</tr>";
-      tableHtml += "\n";
+      tableHtml += "<br />";
     }
   }
   displayInventory.innerHTML = tableHtml;

@@ -17,7 +17,7 @@ How to run:
     - npm install express
     - add more if more commands are needed...
 
-3. Navigate to public/js and run "node app.js" in terminal 
+3. Navigate (cd) to public/js and run "node app.js" in terminal 
     - should show "app is running" and "db has connected" in console
 
 4. Proceed running your stuff (html or render)
