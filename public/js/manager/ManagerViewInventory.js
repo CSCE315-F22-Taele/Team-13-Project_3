@@ -11,7 +11,6 @@ function startView() {
     headers: {
       'Content-type': 'application/json'
     },
-    mode: "no-cors",
     method: 'POST',
     body: JSON.stringify({tableName: tableName})
   })

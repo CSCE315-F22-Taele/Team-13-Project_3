@@ -403,6 +403,7 @@ function processOrder() {
   const cheese = localStorage.getItem('cheeseID');
   const drink = localStorage.getItem('drinkID');      // if none: null
   const toppings = localStorage.getItem('toppingID'); // if none: null
+  const price = localStorage.getItem('price');
 
   // alert("pre-fetch");
 
@@ -416,7 +417,8 @@ function processOrder() {
       sauce: sauce,
       cheese: cheese,
       drink: drink,
-      toppings: toppings
+      toppings: toppings,
+      price : price
     })
   })
   .catch(err => alert(err));

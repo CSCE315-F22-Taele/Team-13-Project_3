@@ -127,6 +127,7 @@ class DbConnect {
     try {
       const response = await new Promise((resolve, reject) =>{
       const query = 'SELECT * FROM ' + tableName;
+      console.log(query);
       
         pool.query(query, (err, results) =>{
           if (err) reject(new Error(err.message));
@@ -161,10 +162,11 @@ class DbConnect {
     }
   }
 
-  async processOrder(crust, sauce, cheese, drink, toppings){
+  async processOrder(crust, sauce, cheese, drink, toppings, price){
 
     var query = "";
 
+    console.log("here");
 
     try {
       // crust
@@ -197,6 +199,27 @@ class DbConnect {
           query = "UPDATE toppings SET quantity = quantity - 1 WHERE id = " + topping;
           pool.query(query);
         });
+      }
+
+      if (price != null){
+
+        console.log()
+        const date = new Date();
+
+        var day = date.getDate();
+        day = '0' + day;
+        var month = date.getMonth() + 1;
+        
+        var year = date.getFullYear();
+
+        var currentDate = `${year}-${month}-${day}`;
+        console.log(currentDate);
+
+        //alert(currentDate);
+
+        query = "insert into order_history(price, date) values ("+ price+", '"+currentDate+"')";
+        pool.query(query);
+        console.log(query);
       }
       
     } catch (error) {

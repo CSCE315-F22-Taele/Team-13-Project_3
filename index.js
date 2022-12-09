@@ -133,9 +133,10 @@ app.post("/processOrder", (req, res) => {
   const cheese = req.body.cheese;
   const drink = req.body.drink; // if none: null
   const toppings = req.body.toppings; // if none: null
+  const price = req.body.price;
 
   try {
-    db.processOrder(crust, sauce, cheese, drink, toppings);
+    db.processOrder(crust, sauce, cheese, drink, toppings, price);
   } catch (error) {
     console.log(error);
   }
@@ -147,9 +148,11 @@ app.post("/processOrder", (req, res) => {
  */
  // app.listen(3000, () => console.log('app is running'));
 
- cors_proxy.createServer({
-  originWhitelist: [], // Allow all origins
-  requireHeader: ['origin', 'x-requested-with'],
-  removeHeaders: ['cookie', 'cookie2']
-}).listen(3000, () => console.log('app is running'));
+//  cors_proxy.createServer({
+//   originWhitelist: [], // Allow all origins
+//   requireHeader: ['origin', 'x-requested-with'],
+//   removeHeaders: ['cookie', 'cookie2']
+// })
+
+app.listen(3000, () => console.log('app is running'));
 
