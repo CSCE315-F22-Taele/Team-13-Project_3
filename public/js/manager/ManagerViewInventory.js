@@ -7,28 +7,26 @@ function startView() {
   
   const tableName = document.getElementById('tableNameViewInv').value;
   // alert(tableName);
-  // fetch('http://localhost:3000/viewTable', {
-  //   headers: {
-  //     'Content-type': 'application/json'
-  //   },
-  //   method: 'POST',
-  //   body: JSON.stringify({tableName: tableName})
-  // })
-  // .then(response => response.json())
-  // .then(data => viewInventorySubmitted(data['data']))
-  // .catch(err => alert(err));
-
-  axios({
-    method: "post",
-    url: 'http://localhost:3000/viewTable',
+  fetch('http://localhost:80/viewTable', {
     headers: {
       'Content-type': 'application/json'
     },
+    method: 'POST',
     body: JSON.stringify({tableName: tableName})
   })
   .then(response => response.json())
   .then(data => viewInventorySubmitted(data['data']))
   .catch(err => alert(err));
+
+  // axios({
+  //   method: "post",
+  //   url: 'http://localhost:3000/viewTable',
+  //   headers: {
+  //     'Content-type': 'application/json'
+  //   },
+  //   body: JSON.stringify({tableName: tableName})
+  // })
+  
   
 }
 

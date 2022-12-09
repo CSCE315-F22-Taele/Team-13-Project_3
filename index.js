@@ -143,6 +143,6 @@ app.post("/processOrder", (req, res) => {
  * Outputs to the console the port being used; useful for coders and managers alike.
  * @param {number} port the port number being used
  */
- app.listen(3000, () => console.log('app is running'));
+ app.listen(80, () => console.log('app is running'));
 
 
