@@ -34,3 +34,12 @@ body {
 .button+.button {
     margin-top: 10px;
   }
+
+  table, th, td {
+    border-collapse: collapse;
+    border: 1px solid #000;
+  }
+
+th, td {
+    padding: 5px;
+}
